@@ -22,12 +22,11 @@ class ViewController: UIViewController {
         
         view.backgroundColor = AppColors.background
                 service = CalcService(displayView: self)
-                // 2
                 configureAppearance()
                 updateDisplay(text: "0")
             }
 
-            // MARK: Methods
+        
             func updateDisplay(text: String) {
                 DispatchQueue.main.async {
                     self.display.text = text
@@ -227,7 +226,6 @@ private extension ViewController {
         
         func setupDisplay() {
             displayView.frame = CGRect(x: 0, y: 0, width: Constants.screenWidth, height: mainVStack.frame.height - (82*5)-60-30)
-            //displayView.backgroundColor = .lightGray
             
             display.frame = CGRect(x: 15, y: 15, width: displayView.frame.width-30, height: displayView.frame.height-15)
             display.textAlignment               = .right

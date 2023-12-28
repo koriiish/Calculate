@@ -20,16 +20,7 @@ class CalcService {
     init(displayView: ViewController) {
         self.displayView = displayView
     }
-    func status() {
-        print(
-               """
-               current number = \(currentNumber)
-               first = \(firstNumber)
-               second = \(secondNumber)
-               result = \(result)
-               """
-        )
-    }
+
     func acAction() {
         firstNumber = 0.0
         secondNumber = 0.0
@@ -37,7 +28,6 @@ class CalcService {
         currentNumber = ""
         result = ""
         displayView.updateDisplay(text: currentNumber)
-        status()
         displayView.updateDisplay(text: "0")
     }
 
@@ -77,8 +67,6 @@ class CalcService {
             displayView.updateDisplay(text: "")
             currentOperation = operation
         }
-        
-        status()
         
     }
     func changeSign() {
