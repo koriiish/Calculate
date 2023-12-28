@@ -93,6 +93,9 @@ private extension ViewController {
            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 30)
            button.tag = tag
            button.layer.cornerRadius = 40
+//           button.layer.cornerRadius = button.frame.height / 2
+//           button.clipsToBounds = true
+//           button.layer.masksToBounds = true
            return button
        }
       
@@ -103,6 +106,7 @@ private extension ViewController {
            acButton.backgroundColor = AppColors.topNumbers
            acButton.setTitleColor(.black, for: .normal)
            acButton.addTarget(self, action: #selector(buttonPressed(_:)), for: .touchUpInside)
+       
            
            let changeSignButton = createButton(order: 1, title: "+/-", tag: 16)
            changeSignButton.backgroundColor = AppColors.topNumbers
