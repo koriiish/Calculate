@@ -1,0 +1,15 @@
+//
+//  Constants.swift
+//  Calculate
+//
+//  Created by Карина Дьячина on 28.12.23.
+//
+
+import Foundation
+import UIKit
+
+struct Constants {
+    static let screenRect    = UIScreen.main.bounds
+    static let screenWidth   = screenRect.size.width
+    static let screenHeight  = screenRect.size.height
+}
